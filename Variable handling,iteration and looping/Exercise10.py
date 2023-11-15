@@ -1,0 +1,19 @@
+while True:
+    try:
+      n = int(input("Enter a number for the fibonacci sequence:"))
+      break
+    except ValueError:
+        print("Please enter a valid integer number")
+
+num1 = 0
+num2 = 1
+next_number = num2
+count = 0
+
+
+while count <= n:
+    print(next_number, end=" ")
+    count += 1
+    num1, num2 = num2, next_number
+    next_number = num1 + num2
+print()
